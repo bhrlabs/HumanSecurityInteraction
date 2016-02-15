@@ -40,81 +40,20 @@
 	<!-- HEADER -->
 
 	<div class="container firstdiv">
-		<h2>Hack List Entry</h2>
-		<form action="HackEntryServlet" method="POST" name="hackform">
+		<h2>Hack List Login</h2>
+		<form action="/hackentry" method="post">
 			<table class="myTableText">
 				<tr>
-					<td>Header :</td>
-					<td><input type="text" name="header" /></td>
+					<td>Username :</td>
+					<td> <input type="text" name="username" /></td>
 				</tr>
 				<tr>
-					<td>Context :</td>
-					<td><input type="text" name="context" /></td>
+					<td>Password :</td>
+					<td> <input type="password" name="password" /></td>
 				</tr>
 				<tr>
-					<td>Target :</td>
-					<td><input type="text" name="target" /></td>
+					<td colspan="2"> <input type="submit" name="Submit" /></td>
 				</tr>
-				<tr>
-					<td>Target Data Type :</td>
-					<td><input type="text" name="datatype" /></td>
-				</tr>
-				<tr>
-					<td>Hacker relation to target :</td>
-					<td><input type="text" name="relation" /></td>
-				</tr>
-				<tr>
-					<td>Subjected Hacker User Contribution :</td>
-					<td><input type="text" name="contribution" /></td>
-				</tr>
-				<tr>
-					<td>Motive :</td>
-					<td><input type="text" name="motive" /></td>
-				</tr>
-				<tr>
-					<td>Malware Used Type :</td>
-					<td><input type="text" name="malwaretype" /></td>
-				</tr>
-				<tr>
-					<td>Malware Name :</td>
-					<td><input type="text" name="malwarename" /></td>
-				</tr>
-				<tr>
-					<td>System Type :</td>
-					<td><input type="text" name="systemtypes" /></td>
-				</tr>
-				<tr>
-					<td>Malware Source :</td>
-					<td><input type="text" name="malwaresource" /></td>
-				</tr>
-				<tr>
-					<td>Browser Type :</td>
-					<td><input type="text" name="browsertype" /></td>
-				</tr>
-				<tr>
-					<td>Date :</td>
-					<td><input type="text" name="date" /></td>
-				</tr>
-				<tr>
-					<td>Notes :</td>
-					<td><input type="text" name="notes" /></td>
-				</tr>
-				<tr>
-					<td>CIO Name:</td>
-					<td><input type="text" name="cio" /></td>
-				</tr>
-				<tr>
-					<td>Sources :</td>
-					<td><input type="text" name="sources" /></td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<center>
-							<input type="submit" name="Submit" />
-						</center>
-					</td>
-				</tr>
-
 			</table>
 		</form>
 	</div>
