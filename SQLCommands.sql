@@ -21,3 +21,8 @@ CREATE TABLE hacklist(
 	notes VARCHAR(255),
 	cio VARCHAR(255),
 	sources VARCHAR(255) );
+	
+	
+CREATE TABLE login(
+	username varchar(50) NOT NULL PRIMARY KEY,
+	password varchar(50) NOT NULL);

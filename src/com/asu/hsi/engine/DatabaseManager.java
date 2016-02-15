@@ -20,7 +20,7 @@ public class DatabaseManager {
     }
 	
 	public static Connection getConnection() throws SQLException {
-		return DriverManager.getConnection(Constants.DB_URL, Constants.DB_USER_NAME, Constants.DB_PASSWORD);
+			return DriverManager.getConnection(Constants.DB_URL, Constants.DB_USER_NAME, Constants.DB_PASSWORD);
 	}
 
 	/**
@@ -52,8 +52,9 @@ public class DatabaseManager {
 	
 	public static void main(String[] args) {
 		try {
+			Class.forName("com.mysql.jdbc.Driver");
 			getConnection();
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

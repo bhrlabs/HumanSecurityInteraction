@@ -81,7 +81,7 @@
 				</tr>
 				<tr>
 					<td>System Type :</td>
-					<td><input type="text" name="systemtypes" /></td>
+					<td><input type="text" name="systemtype" /></td>
 				</tr>
 				<tr>
 					<td>Malware Source :</td>
