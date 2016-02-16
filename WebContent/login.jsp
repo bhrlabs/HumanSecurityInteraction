@@ -42,7 +42,7 @@
 	<div class="container firstdiv">
 		<h2>Hack List Login</h2>
 		<form action="HackLoginServlet" method="POST">
-			<table class="myTableText">
+			<table class="table-fill">
 				<tr>
 					<td>Username :</td>
 					<td> <input type="text" name="username" /></td>

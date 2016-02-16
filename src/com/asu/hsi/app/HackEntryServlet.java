@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.asu.hsi.engine.HackEntryManager;
+
 /**
  * Servlet implementation class HackEntryServlet
  */
@@ -55,9 +57,16 @@ public class HackEntryServlet extends HttpServlet {
 		values[14] = request.getParameter("cio");
 		values[15] = request.getParameter("sources");
 		
-		// TODO: Call Database function here
+		boolean flag = HackEntryManager.insertHack(values);
 		
-		String output = "<body><h1>Entry Added<h2></br>"
+		String st = "";
+		if (flag){
+			st = "Successful";
+		} else {
+			st = "Failed";
+		}
+		
+		String output = "<body><h1>Entry Addition " + st + "<h2></br>"
 				+ "<a href=\"dataform.jsp\">Back to Entry Page</a></body>";
 		PrintWriter out = response.getWriter();
 		out.println(output);

@@ -52,7 +52,7 @@ public class HackLoginServlet extends HttpServlet {
 			res = "Failed";
 		}
 		
-		out.println("<body><h1>Login " + res + "</h1></body>");
+		out.println("<body><h1>Login " + res + "</h1></br><a href=\"dataform.jsp\">Enter Website</a></body>");
 		
 		//doGet(request, response);
 	}
