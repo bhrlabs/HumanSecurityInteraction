@@ -93,7 +93,7 @@
 				</tr>
 				<tr>
 					<td>Date :</td>
-					<td><input type="text" name="date" /></td>
+					<td><input type="text" name="hdate" /></td>
 				</tr>
 				<tr>
 					<td>Notes :</td>

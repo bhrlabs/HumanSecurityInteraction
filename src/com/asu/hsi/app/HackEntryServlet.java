@@ -52,7 +52,7 @@ public class HackEntryServlet extends HttpServlet {
 		values[9] = request.getParameter("systemtype");
 		values[10] = request.getParameter("malwaresource");
 		values[11] = request.getParameter("browsertype");
-		values[12] = request.getParameter("date");
+		values[12] = request.getParameter("hdate");
 		values[13] = request.getParameter("notes");
 		values[14] = request.getParameter("cio");
 		values[15] = request.getParameter("sources");
