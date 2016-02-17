@@ -1,4 +1,3 @@
-<%@page import="com.asu.hsi.properties.SessionVar"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -17,6 +16,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/design.js"></script>
 </head>
+
 <body>
 	<!-- HEADER -->
 	<nav class="navbar-inverse tophd navbar-fixed-top">
@@ -39,13 +39,11 @@
 	</div>
 	</nav>
 	<!-- HEADER -->
-	<%
-		if (SessionVar.sesNum == 1937) {
-	%>
+
 	<div class="container firstdiv">
 		<h2>Hack List Entry</h2>
 		<form action="HackEntryServlet" method="POST" name="hackform">
-			<table class="table-fill">
+			<table class="myTableText">
 				<tr>
 					<td>Header :</td>
 					<td><input type="text" name="header" /></td>
@@ -60,7 +58,15 @@
 				</tr>
 				<tr>
 					<td>Target Data Type :</td>
-					<td><input type="text" name="datatype" /></td>
+					<td><form action="">
+                                            <input type="checkbox" name=“type” value="Application">Application<br>
+                                            <input type="checkbox" name=“type” value="Enail">Email<br>
+                                            <input type="checkbox" name=“type” value="Database">Database<br>
+                                            <input type="checkbox" name=“type” value="Securitysystem">Security system<br>
+                                            <input type="checkbox" name=“type” value="HostFileSystem">Host File System<br>
+                                            <input type="checkbox" name=“type” value="PersonalFileSystem">Personal File System
+                                            </form>
+                                        /td>
 				</tr>
 				<tr>
 					<td>Hacker relation to target :</td>
@@ -84,7 +90,7 @@
 				</tr>
 				<tr>
 					<td>System Type :</td>
-					<td><input type="text" name="systemtype" /></td>
+					<td><input type="text" name="systemtypes" /></td>
 				</tr>
 				<tr>
 					<td>Malware Source :</td>
@@ -96,7 +102,7 @@
 				</tr>
 				<tr>
 					<td>Date :</td>
-					<td><input type="text" name="hdate" /></td>
+					<td><input type="text" name="date" /></td>
 				</tr>
 				<tr>
 					<td>Notes :</td>
@@ -121,20 +127,12 @@
 			</table>
 		</form>
 	</div>
-	<%
-		} else {
-	%>
-	<div class="container firstdiv">
-		<h1>Kindly Login to Proceed</h1><br/>
-		<a href="login.jsp">Login Page</a>
-	</div>
-	<%
-		}
-	%>
+
+
 	<!-- FOOTER -->
 	<div class="container-fluid footer">
 		<div class="container">
-			<div class="navbar-left">� 2015 humanhsecurityinteraction.com.
+			<div class="navbar-left">� 2015 humanhsecurityinteraction.com.
 				All rights reserved.</div>
 			<div class="navbar-right">
 				<a href="index.html">Home</a> | <a href="model.html">Model</a> | <a
