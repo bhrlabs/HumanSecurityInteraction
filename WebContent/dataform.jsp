@@ -1,3 +1,4 @@
+<%@page import="com.asu.hsi.properties.SessionVar"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -38,7 +39,9 @@
 	</div>
 	</nav>
 	<!-- HEADER -->
-
+	<%
+		if (SessionVar.sesNum == 1937) {
+	%>
 	<div class="container firstdiv">
 		<h2>Hack List Entry</h2>
 		<form action="HackEntryServlet" method="POST" name="hackform">
@@ -118,8 +121,16 @@
 			</table>
 		</form>
 	</div>
-
-
+	<%
+		} else {
+	%>
+	<div class="container firstdiv">
+		<h1>Kindly Login to Proceed</h1><br/>
+		<a href="login.jsp">Login Page</a>
+	</div>
+	<%
+		}
+	%>
 	<!-- FOOTER -->
 	<div class="container-fluid footer">
 		<div class="container">

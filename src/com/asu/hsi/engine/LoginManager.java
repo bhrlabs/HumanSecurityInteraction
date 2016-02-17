@@ -24,6 +24,8 @@ public class LoginManager {
 					String pass = rs.getString(1);
 					if (password != null && password.equals(pass)) {
 						retVal = true;
+						Thread thread = new Thread(new SessionKeeper());
+						thread.start();
 					}
 				}
 			} finally {
