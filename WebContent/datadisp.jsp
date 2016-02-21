@@ -1,3 +1,9 @@
+<%@page import="java.io.PrintWriter"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="com.asu.hsi.engine.DatabaseManager"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,8 +13,6 @@
 <title>Human Security Interaction</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="google-signin-client_id"
-	content="150003091760-k7c690rf8qtrjohjvvqe5l28ra398kcu.apps.googleusercontent.com">
 <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
 <link rel="shortcut icon" type="image/ico"
 	href="http://eg.com/favicon.ico" />
@@ -17,7 +21,6 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/design.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
 	<!-- HEADER -->
@@ -42,33 +45,71 @@
 	</nav>
 	<!-- HEADER -->
 
-	<center>
-		<div class="container firstdiv">
-			<h2>Hack List Login</h2>
-			<h3>Sign In Using Google</h3>
-			<div class="g-signin2" data-onsuccess="onSignIn">Sign In</div>
-			<script type="text/javascript">
-				function onSignIn(googleUser) {
-					var profile = googleUser.getBasicProfile();
-					console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-					console.log('Name: ' + profile.getName());
-					console.log('Image URL: ' + profile.getImageUrl());
-					console.log('Email: ' + profile.getEmail());
-					window.location = "dataform.jsp";
-				}
-			</script>
-			<br /> <br /> <a href="#" onclick="signOut();">Sign out</a>
-			<script>
-				function signOut() {
-					var auth2 = gapi.auth2.getAuthInstance();
-					auth2.signOut().then(function() {
-						console.log('User signed out.');
-					});
-				}
-			</script>
-		</div>
-	</center>
-
+	<div class="container firstdiv">
+		<h2>Hack List </h2>
+		<table class="table-fill">
+			<tr>
+				<th>Header</th>
+				<th>Context</th>
+				<th>Target</th>
+				<th>Target Data Type</th>
+				<th>Hacker relation to target</th>
+				<th>Hacked User Contribution</th>
+				<th>Motive</th>
+				<th>Malware Type Used</th>
+				<th>Malware Name</th>
+				<th>System Type</th>
+				<th>Malware Source</th>
+				<th>Browser Type</th>
+				<th>Date</th>
+				<th>Notes</th>
+				<th>CIO</th>
+				<th>Sources</th>
+			</tr>
+			<% 	Connection con = null;
+			   	Statement st = null;
+			   	ResultSet rs = null;
+			   	try {
+			   		try {
+			   			con = DatabaseManager.getConnection();
+			   			st = con.createStatement();
+			   			rs = st.executeQuery("SELECT * FROM hacklist");
+			   			while (rs.next()) {
+			%> 
+			<tr>
+				<td><% out.print(rs.getString(2));%></td>
+				<td><% out.print(rs.getString(3));%></td>
+				<td><% out.print(rs.getString(4));%></td>
+				<td><% out.print(rs.getString(5));%></td>
+				<td><% out.print(rs.getString(6));%></td>
+				<td><% out.print(rs.getString(7));%></td>
+				<td><% out.print(rs.getString(8));%></td>
+				<td><% out.print(rs.getString(9));%></td>
+				<td><% out.print(rs.getString(10));%></td>
+				<td><% out.print(rs.getString(11));%></td>
+				<td><% out.print(rs.getString(12));%></td>
+				<td><% out.print(rs.getString(13));%></td>
+				<td><% out.print(rs.getString(14));%></td>
+				<td><% out.print(rs.getString(15));%></td>
+				<td><% out.print(rs.getString(16));%></td>
+				<td><% out.print(rs.getString(17));%></td>
+			</tr>
+			 <%
+			   			}
+			   		} catch (SQLException e) {
+			   			e.printStackTrace();
+			   		}
+			   	} finally {
+		   			if (con != null){
+		   				st.close();
+		   				con.close();
+		   				rs.close();
+		   			}
+		   		}
+			   
+			   %>
+		</table>
+	</div>
 
 
 	<!-- FOOTER -->

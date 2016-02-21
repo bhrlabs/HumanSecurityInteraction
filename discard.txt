@@ -1,0 +1,162 @@
+<form action="HackEntryServlet" method="POST" name="hackform">
+					<table>
+						<tr>
+								<td><h4>Header :</h4></td>
+								<td><input type="text" name="header" placeholder="header"/></td>
+						</tr>
+						<tr>
+								<td><h4>Context :</h4></td>
+								<td><textarea class="mess" name="context" placeholder="Context"></textarea></td>
+						</tr>
+						<tr>
+								<td><h4>Target :</h4></td>
+								<td><input type="text" name="target" /></td>
+						</tr>
+						<tr>
+								<td><h4>Target Data Type :</h4></td>
+								<td><input type="text" name="datatype" /></td>
+						</tr>
+						<tr>
+								<td><h4>Hacker relation to target :</h4></td>
+								<td><input type="text" name="relation" /></td>
+						</tr>
+						<tr>	
+								<td><h4>Subjected Hacker User Contribution :</h4></td>
+								<td><input type="text" name="contribution" /></td>
+						</tr>
+						<tr>
+								<td><h4>Motive :</h4></td>
+								<td><input type="text" name="motive" /></td>
+						</tr>
+						<tr>
+								<td><h4>Malware Used Type :</h4></td>
+								<td><input type="text" name="malwaretype" /></td>
+						</tr>
+						<tr>
+								<td><h4>Malware Name :</h4></td>
+								<td><input type="text" name="malwarename" /></td>
+						</tr>
+						<tr>
+								<td><h4>System Type :</h4></td>
+								<td><input type="text" name="systemtype" /></td>
+						</tr>
+						<tr>
+								<td><h4>Malware Source :</h4></td>
+								<td><input type="text" name="malwaresource" /></td>
+						</tr>
+						<tr>
+								<td><h4>Browser Type :</h4></td>
+								<td><input type="text" name="browsertype" /></td>
+						</tr>
+						<tr>
+								<td><h4>Date :</h4></td>
+								<td><input type="text" name="hdate" /></td>
+						</tr>
+						<tr>
+								<td><h4>Notes :</h4></td>
+								<td><textarea class="mess" type="text" name="notes" ></textarea></td>
+						</tr>
+						<tr>
+								<td><h4>CIO Name:</h4></td>
+								<td><input type="text" name="cio" /></td>
+						</tr>
+						<tr>
+								<td><h4>Sources :</h4></td>
+								<td><input type="text" name="sources" /></td>
+						</tr>
+						<tr>		
+					</table>
+								<input type="submit" value="Submit your hack">
+				</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="table-fill">
+				<tr>
+					<td>Header :</td>
+					<td><input type="text" name="header" /></td>
+				</tr>
+				<tr>
+					<td>Context :</td>
+					<td><input type="text" name="context" /></td>
+				</tr>
+				<tr>
+					<td>Target :</td>
+					<td><input type="text" name="target" /></td>
+				</tr>
+				<tr>
+					<td>Target Data Type :</td>
+					<td><input type="text" name="datatype" /></td>
+				</tr>
+				<tr>
+					<td>Hacker relation to target :</td>
+					<td><input type="text" name="relation" /></td>
+				</tr>
+				<tr>
+					<td>Subjected Hacker User Contribution :</td>
+					<td><input type="text" name="contribution" /></td>
+				</tr>
+				<tr>
+					<td>Motive :</td>
+					<td><input type="text" name="motive" /></td>
+				</tr>
+				<tr>
+					<td>Malware Used Type :</td>
+					<td><input type="text" name="malwaretype" /></td>
+				</tr>
+				<tr>
+					<td>Malware Name :</td>
+					<td><input type="text" name="malwarename" /></td>
+				</tr>
+				<tr>
+					<td>System Type :</td>
+					<td><input type="text" name="systemtype" /></td>
+				</tr>
+				<tr>
+					<td>Malware Source :</td>
+					<td><input type="text" name="malwaresource" /></td>
+				</tr>
+				<tr>
+					<td>Browser Type :</td>
+					<td><input type="text" name="browsertype" /></td>
+				</tr>
+				<tr>
+					<td>Date :</td>
+					<td><input type="text" name="hdate" /></td>
+				</tr>
+				<tr>
+					<td>Notes :</td>
+					<td><input type="text" name="notes" /></td>
+				</tr>
+				<tr>
+					<td>CIO Name:</td>
+					<td><input type="text" name="cio" /></td>
+				</tr>
+				<tr>
+					<td>Sources :</td>
+					<td><input type="text" name="sources" /></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<center>
+							<input type="submit" name="Submit" />
+						</center>
+					</td>
+				</tr>
+
+			</table>
