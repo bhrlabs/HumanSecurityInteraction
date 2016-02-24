@@ -46,7 +46,7 @@
 		<div class="container firstdiv">
 			<h2>Hack List Login</h2>
 			<h3>Sign In Using Google</h3>
-			<div class="g-signin2" data-onsuccess="onSignIn">Sign In</div>
+			<div class="g-signin2" data-onsuccess="onSignIn"></div>
 			<script type="text/javascript">
 				function onSignIn(googleUser) {
 					var profile = googleUser.getBasicProfile();
@@ -54,7 +54,12 @@
 					console.log('Name: ' + profile.getName());
 					console.log('Image URL: ' + profile.getImageUrl());
 					console.log('Email: ' + profile.getEmail());
-					window.location = "dataform.jsp";
+					var id_token = googleUser.getAuthResponse().id_token;
+			        console.log("ID Token: " + id_token);
+					
+					/* window.location = "dataform.jsp"; 
+					request.setAttribute("token", id_token);*/
+					window.location="HackLoginServlet?token="+id_token;
 				}
 			</script>
 			<br /> <br /> <a href="#" onclick="signOut();">Sign out</a>
