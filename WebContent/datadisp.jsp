@@ -45,71 +45,143 @@
 	</nav>
 	<!-- HEADER -->
 
-	<div class="container firstdiv">
-		<h2>Hack List </h2>
-		<table class="table-fill">
-			<tr>
-				<th>Header</th>
-				<th>Context</th>
-				<th>Target</th>
-				<th>Target Data Type</th>
-				<th>Hacker relation to target</th>
-				<th>Hacked User Contribution</th>
-				<th>Motive</th>
-				<th>Malware Type Used</th>
-				<th>Malware Name</th>
-				<th>System Type</th>
-				<th>Malware Source</th>
-				<th>Browser Type</th>
-				<th>Date</th>
-				<th>Notes</th>
-				<th>CIO</th>
-				<th>Sources</th>
-			</tr>
-			<% 	Connection con = null;
-			   	Statement st = null;
-			   	ResultSet rs = null;
-			   	try {
-			   		try {
-			   			con = DatabaseManager.getConnection();
-			   			st = con.createStatement();
-			   			rs = st.executeQuery("SELECT * FROM hacklist");
-			   			while (rs.next()) {
-			%> 
-			<tr>
-				<td><% out.print(rs.getString(2));%></td>
-				<td><% out.print(rs.getString(3));%></td>
-				<td><% out.print(rs.getString(4));%></td>
-				<td><% out.print(rs.getString(5));%></td>
-				<td><% out.print(rs.getString(6));%></td>
-				<td><% out.print(rs.getString(7));%></td>
-				<td><% out.print(rs.getString(8));%></td>
-				<td><% out.print(rs.getString(9));%></td>
-				<td><% out.print(rs.getString(10));%></td>
-				<td><% out.print(rs.getString(11));%></td>
-				<td><% out.print(rs.getString(12));%></td>
-				<td><% out.print(rs.getString(13));%></td>
-				<td><% out.print(rs.getString(14));%></td>
-				<td><% out.print(rs.getString(15));%></td>
-				<td><% out.print(rs.getString(16));%></td>
-				<td><% out.print(rs.getString(17));%></td>
-			</tr>
-			 <%
-			   			}
-			   		} catch (SQLException e) {
-			   			e.printStackTrace();
-			   		}
-			   	} finally {
-		   			if (con != null){
-		   				st.close();
-		   				con.close();
-		   				rs.close();
-		   			}
-		   		}
-			   
-			   %>
-		</table>
+	<div class="firstdiv">
+		<center>
+			<br />
+			<h2>Hack List</h2>
+		</center>
+		<div class="CSSTableGenerator">
+			<table>
+				<tr>
+					<td>Header</td>
+					<td>Context</td>
+					<td>Target</td>
+					<td>Target Data Type</td>
+					<td>Hacker relation to target</td>
+					<td>Hacked User Contribution</td>
+					<td>Motive</td>
+					<td>Malware Type Used</td>
+					<td>Malware Name</td>
+					<td>System Type</td>
+					<td>Malware Source</td>
+					<td>Browser Type</td>
+					<td>Date</td>
+					<td>Notes</td>
+					<td>CIO</td>
+					<td>Sources</td>
+				</tr>
+				<%
+					Connection con = null;
+					Statement st = null;
+					ResultSet rs = null;
+					try {
+						try {
+							con = DatabaseManager.getConnection();
+							st = con.createStatement();
+							rs = st.executeQuery("SELECT * FROM hacklist");
+							while (rs.next()) {
+				%>
+				<tr>
+					<td>
+						<%
+							out.print(rs.getString(2));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(3));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(4));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(5));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(6));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(7));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(8));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(9));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(10));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(11));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(12));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(13));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(14));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(15));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(16));
+						%>
+					</td>
+					<td>
+						<%
+							out.print(rs.getString(17));
+						%>
+					</td>
+				</tr>
+				<%
+					}
+						} catch (SQLException e) {
+							e.printStackTrace();
+						}
+					} finally {
+						if (con != null) {
+							st.close();
+							con.close();
+							rs.close();
+						}
+					}
+				%>
+			</table>
+		</div>
 	</div>
+	<br />
+	<br />
+	<br />
 
 
 	<!-- FOOTER -->

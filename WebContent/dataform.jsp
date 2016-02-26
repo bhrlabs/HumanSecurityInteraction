@@ -51,15 +51,20 @@
 		<div class="main-section">
 			<div class="login-form">
 				<h2>Hack List Entry</h2>
-				<%String[] user = GoogleSession.getUserEmail(token); %>
-				<span><%out.print(user[1] + " - " + user[0]);%></span>
+				<%
+					String[] user = GoogleSession.getUserEmail(token);
+				%>
+				<span> <%
+ 	out.print(user[1] + " - " + user[0]);
+ %>
+				</span>
 				<form action="HackEntryServlet" method="POST" name="hackform">
 					<h4>Header :</h4>
-					<input type="text" name="header" placeholder="header" />
+					<input type="text" name="header" placeholder="Header" />
 					<h4>Context :</h4>
 					<textarea class="mess" name="context" placeholder="Context"></textarea>
 					<h4>Target :</h4>
-					<input type="text" name="target" />
+					<input type="text" name="target" placeholder="Target" />
 					<h4>Target Data Type :</h4>
 					<!-- <input type="text" name="datatype" /> -->
 					<input type="checkbox" name="datatype" value="Application">Application
@@ -105,16 +110,23 @@
 
 	<br />
 	<br />
-	<a href="#" onclick="signOut();">Sign out</a>
-	<script>
-		function signOut() {
-			var auth2 = gapi.auth2.getAuthInstance();
-			auth2.signOut().then(function() {
-				console.log('User signed out.');
-			});
-			window.location = "login.jsp";
-		}
-	</script>
+	<center>
+		<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		<br />
+		<br />
+		<br /> <a href="#" onclick="signOut();"><img src="images/so.png" /></a>
+		<script>
+			function signOut() {
+				var auth2 = gapi.auth2.getAuthInstance();
+				auth2.signOut().then(function() {
+					console.log('User signed out.');
+				});
+				window.location = "login.jsp";
+			}
+		</script>
+		<br />
+		<br />
+	</center>
 	<%
 		} else {
 	%>

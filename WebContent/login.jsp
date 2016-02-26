@@ -55,22 +55,15 @@
 					console.log('Image URL: ' + profile.getImageUrl());
 					console.log('Email: ' + profile.getEmail());
 					var id_token = googleUser.getAuthResponse().id_token;
-			        console.log("ID Token: " + id_token);
-					
+					console.log("ID Token: " + id_token);
+
 					/* window.location = "dataform.jsp"; 
 					request.setAttribute("token", id_token);*/
-					window.location="HackLoginServlet?token="+id_token;
+					window.location = "HackLoginServlet?token=" + id_token;
 				}
 			</script>
-			<br /> <br /> <a href="#" onclick="signOut();">Sign out</a>
-			<script>
-				function signOut() {
-					var auth2 = gapi.auth2.getAuthInstance();
-					auth2.signOut().then(function() {
-						console.log('User signed out.');
-					});
-				}
-			</script>
+			<br />
+			<br />
 		</div>
 	</center>
 
