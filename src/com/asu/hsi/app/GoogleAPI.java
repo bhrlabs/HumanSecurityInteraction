@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.Arrays;
 
+import org.apache.catalina.Session;
+
 import com.asu.hsi.properties.Constants;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken.Payload;
@@ -14,7 +16,7 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 
 public class GoogleAPI {
 
-	public static void verifyToken(String idTokenString) {
+	public static boolean verifyToken(String idTokenString) {
 		GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(new NetHttpTransport(), JacksonFactory.getDefaultInstance())
 			    .setAudience(Arrays.asList(Constants.CLIENT_ID))
 			    // If you retrieved the token on Android using the Play Services 8.3 API or newer, set
@@ -53,10 +55,12 @@ public class GoogleAPI {
 			  String givenName = (String) payload.get("given_name");
 
 			  // Use or store profile information
-			  // ...
+			  
+			  return true;
 
 			} else {
 			  System.out.println("Invalid ID token.");
+			  return false;
 			}
 	}
 	

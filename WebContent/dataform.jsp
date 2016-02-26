@@ -1,3 +1,4 @@
+<%@page import="com.asu.hsi.engine.GoogleSession"%>
 <%@page import="com.asu.hsi.properties.SessionVar"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -43,13 +44,15 @@
 	</nav>
 	<!-- HEADER -->
 	<%
-		if (true) {
+		String token = request.getParameter("token");
+		if (GoogleSession.isUserValid(token)) {
 	%>
 	<div class="main">
 		<div class="main-section">
 			<div class="login-form">
 				<h2>Hack List Entry</h2>
-				<span></span>
+				<%String[] user = GoogleSession.getUserEmail(token); %>
+				<span><%out.print(user[1] + " - " + user[0]);%></span>
 				<form action="HackEntryServlet" method="POST" name="hackform">
 					<h4>Header :</h4>
 					<input type="text" name="header" placeholder="header" />
@@ -59,12 +62,17 @@
 					<input type="text" name="target" />
 					<h4>Target Data Type :</h4>
 					<!-- <input type="text" name="datatype" /> -->
-					<input type="checkbox" name="datatype" value="Application">Application &nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="checkbox" name="datatype" value="Enail">Email &nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="checkbox" name="datatype" value="Database">Database &nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="checkbox" name="datatype" value="Securitysystem">Security system &nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="checkbox" name="datatype" value="HostFileSystem">Host File System&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="checkbox" name="datatype" value="PersonalFileSystem">Personal File System
+					<input type="checkbox" name="datatype" value="Application">Application
+					&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="datatype"
+						value="Email">Email &nbsp;&nbsp;&nbsp;&nbsp; <input
+						type="checkbox" name="datatype" value="Database">Database
+					&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="datatype"
+						value="Securitysystem">Security system
+					&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="datatype"
+						value="HostFileSystem">Host File
+					System&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+						name="datatype" value="PersonalFileSystem">Personal File
+					System
 					<h4>Hacker relation to target :</h4>
 					<input type="text" name="relation" />
 					<h4>Subjected Hacked User Contribution :</h4>
@@ -94,21 +102,25 @@
 			</div>
 		</div>
 	</div>
+
+	<br />
+	<br />
+	<a href="#" onclick="signOut();">Sign out</a>
+	<script>
+		function signOut() {
+			var auth2 = gapi.auth2.getAuthInstance();
+			auth2.signOut().then(function() {
+				console.log('User signed out.');
+			});
+			window.location = "login.jsp";
+		}
+	</script>
 	<%
 		} else {
 	%>
 	<div class="container firstdiv">
 		<h1>Kindly Login to Proceed</h1>
-		<br /> <a href="login.jsp">Login Page</a> <a href="#"
-			onclick="signOut();">Sign out</a>
-		<script>
-			function signOut() {
-				var auth2 = gapi.auth2.getAuthInstance();
-				auth2.signOut().then(function() {
-					console.log('User signed out.');
-				});
-			}
-		</script>
+		<br /> <a href="login.jsp">Login Page</a>
 	</div>
 
 	<%
