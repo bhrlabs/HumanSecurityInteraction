@@ -7,7 +7,7 @@ USE hsidata;
 CREATE TABLE hacklist( 
 	hackid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	header VARCHAR(255), context VARCHAR(255),
-	target VARCHAR(255), 
+	target VARCHAR(1000), 
 	datatype VARCHAR(255),
 	relation VARCHAR(255) , 
 	contribution VARCHAR(255),
@@ -18,9 +18,9 @@ CREATE TABLE hacklist(
 	malwaresource VARCHAR(255),
 	browsertype VARCHAR(255),
 	hdate VARCHAR(255),
-	notes VARCHAR(255),
+	notes VARCHAR(1000),
 	cio VARCHAR(255),
-	sources VARCHAR(255) );
+	sources VARCHAR(1000) );
 	
 	
 CREATE TABLE login(

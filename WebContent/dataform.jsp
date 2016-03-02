@@ -47,74 +47,171 @@
 		String token = request.getParameter("token");
 		if (GoogleSession.isUserValid(token)) {
 	%>
-	<div class="main">
-		<div class="main-section">
-			<div class="login-form">
-				<h2>Hack List Entry</h2>
+	<div class="main-section">
+		<div class="login-form">
+			<%
+				String[] user = GoogleSession.getUserEmail(token);
+			%>
+			<h2>
 				<%
-					String[] user = GoogleSession.getUserEmail(token);
+					out.print(user[1] + " - " + user[0]);
 				%>
-				<span> <%
- 	out.print(user[1] + " - " + user[0]);
- %>
-				</span>
-				<form action="HackEntryServlet" method="POST" name="hackform">
-					<h4>Header :</h4>
-					<input type="text" name="header" placeholder="Header" />
-					<h4>Context :</h4>
-					<textarea class="mess" name="context" placeholder="Context"></textarea>
-					<h4>Target :</h4>
-					<input type="text" name="target" placeholder="Target" />
-					<h4>Target Data Type :</h4>
-					<!-- <input type="text" name="datatype" /> -->
-					<input type="checkbox" name="datatype" value="Application">Application
-					&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="datatype"
-						value="Email">Email &nbsp;&nbsp;&nbsp;&nbsp; <input
-						type="checkbox" name="datatype" value="Database">Database
-					&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="datatype"
-						value="Securitysystem">Security system
-					&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="datatype"
-						value="HostFileSystem">Host File
-					System&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
-						name="datatype" value="PersonalFileSystem">Personal File
-					System
-					<h4>Hacker relation to target :</h4>
-					<input type="text" name="relation" />
-					<h4>Subjected Hacked User Contribution :</h4>
-					<input type="text" name="contribution" />
-					<h4>Motive :</h4>
-					<input type="text" name="motive" />
-					<h4>Malware Used Type :</h4>
-					<input type="text" name="malwaretype" />
-					<h4>Malware Name :</h4>
-					<input type="text" name="malwarename" />
-					<h4>System Type :</h4>
-					<input type="text" name="systemtype" />
-					<h4>Malware Source :</h4>
-					<input type="text" name="malwaresource" />
-					<h4>Browser Type :</h4>
-					<input type="text" name="browsertype" />
-					<h4>Date :</h4>
-					<input type="text" name="hdate" />
-					<h4>Notes :</h4>
-					<textarea class="mess" type="text" name="notes"></textarea>
-					<h4>CIO Name:</h4>
-					<input type="text" name="cio" />
-					<h4>Sources :</h4>
-					<input type="text" name="sources" /> <input type="submit"
-						value="Submit your hack">
-				</form>
-			</div>
+
+				<div style="display: none;">
+					<div class="g-signin2" data-onsuccess="onSignIn"></div>
+				</div>
+				<a href="#" onclick="signOut();"><img src="images/so.png" /></a>
+				<script>
+					function signOut() {
+						var auth2 = gapi.auth2.getAuthInstance();
+						auth2.signOut().then(function() {
+							console.log('User signed out.');
+						});
+						window.location = "login.jsp";
+					}
+				</script>
+			</h2>
+			<form action="HackEntryServlet" method="POST" name="hackform">
+				<table>
+					<tr>
+						<td><h4>Header :</h4></td>
+						<td><input type="text" name="header" placeholder="Header" /></td>
+					</tr>
+					<tr>
+						<td><h4>Context :</h4></td>
+						<td><textarea class="mess" name="context"
+								placeholder="Context"></textarea></td>
+					</tr>
+					<tr>
+						<td><h4>Target :</h4></td>
+						<td><input type="text" name="target" placeholder="Target" /></td>
+					</tr>
+					<tr>
+						<td><h4>Target Datatype :</h4></td>
+						<td><input type="checkbox" name="datatype"
+							value="Application">Application &nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" name="datatype" value="Email">Email
+							&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="datatype"
+							value="Database">Database &nbsp;&nbsp;&nbsp;&nbsp; <input
+							type="checkbox" name="datatype" value="Securitysystem">Security
+							system &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+							name="datatype" value="HostFileSystem">Host File
+							System&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+							name="datatype" value="PersonalFileSystem">Personal File
+							System</td>
+					</tr>
+					<tr>
+						<td><h4>Hacker relation to target :</h4></td>
+						<td><input type="text" name="relation" /></td>
+					</tr>
+					<tr>
+						<td><h4>Subjected Hacker User Contribution :</h4></td>
+						<td><input type="text" name="contribution" /></td>
+					</tr>
+					<tr>
+						<td><h4>Motive :</h4></td>
+						<td><input type="checkbox" name="motive" value="Entitiled">Entitiled
+							&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="motive"
+							value="Sabotage">Sabotage &nbsp;&nbsp;&nbsp;&nbsp; <input
+							type="checkbox" name="motive" value="Conflict of Interest">Conflict
+							of Interest &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+							name="motive" value="Intrusion">Intrusion
+							&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="motive"
+							value="Just Because I Can">Just Because I
+							Can&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="motive"
+							value="Espionage">Espionage&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" name="motive"
+							value="Re-selling Data">Re-selling Data&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" name="motive"
+							value="Revenge">Revenge&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" name="motive"
+							value="Ransom">Ransom&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td><h4>Malware Used Type :</h4></td>
+						<td><input type="checkbox" name="malwaretype" value="Virus">Virus
+							&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="motive"
+							value="Worm">Worm &nbsp;&nbsp;&nbsp;&nbsp; <input
+							type="checkbox" name="malwaretype" value="AdWare">AdWare&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+							name="malwaretype" value="Spyware">Spyware
+							&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="malwaretype"
+							value="CrapWare">CrapWare&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="malwaretype"
+							value="Trojan Horse">Trojan Horse&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" name="malwaretype"
+							value="RansomWare">RansomWare&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="checkbox" name="malwaretype"
+							value="JSMalware">JSMalware&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td><h4>Malware Name :</h4></td>
+						<td><input type="text" name="malwarename" placeholder="Malware Name"/></td>
+					</tr>
+					<tr>
+						<td><h4>System Type :</h4></td>
+						<td><input type="text" name="systemtype" placeholder="System Type"/></td>
+					</tr>
+					<tr>
+						<td><h4>Malware Source :</h4></td>
+						<td><input type="checkbox" name="malwaresource"
+							value="Phishing">Phishing &nbsp;&nbsp;&nbsp;&nbsp; <input
+							type="checkbox" name="malwaresource" value="Trusted Source">Trusted
+							Source &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+							name="malwaresource" value="Website">Website
+							&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+							name="malwaresource" value="Notes">Notes
+							&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td><h4>Browser Type :</h4></td>
+						<td><input type="checkbox" name="browsertype" value="Chrome">Chrome
+							&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+							name="browsertype" value="IE Explorer">IE Explorer
+							&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+							name="browsertype" value="Firefox">Firefox
+							&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox"
+							name="browsertype" value="Safari">Safari
+							&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td><h4>Date :</h4></td>
+						<td><input type="text" name="hdate" placeholder="Date"/></td>
+					</tr>
+					<tr>
+						<td><h4>Notes :</h4></td>
+						<td><textarea class="mess" type="text" name="notes" placeholder="Notes"></textarea></td>
+					</tr>
+					<tr>
+						<td><h4>Contact Name:</h4></td>
+						<td><input type="text" name="cio" placeholder="Contact"/></td>
+					</tr>
+					<tr>
+						<td><h4>Sources :</h4></td>
+						<td><input type="text" name="sources" placeholder="Sources"/></td>
+					</tr>
+				</table>
+				<input type="submit" value="Submit your hack">
+			</form>
 		</div>
+	</div>
+
+	<br />
+
+	<%
+		} else {
+	%>
+	<div class="container firstdiv">
+		<h1>Kindly Login to Proceed</h1>
+		<br /> <a href="login.jsp">Login Page</a>
 	</div>
 
 	<br />
 	<br />
 	<center>
-		<div class="g-signin2" data-onsuccess="onSignIn"></div>
-		<br />
-		<br />
-		<br /> <a href="#" onclick="signOut();"><img src="images/so.png" /></a>
+		<div style="display: none;">
+			<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		</div>
+		<br /> <br /> <br /> <a href="#" onclick="signOut();"><img
+			src="images/so.png" /></a>
 		<script>
 			function signOut() {
 				var auth2 = gapi.auth2.getAuthInstance();
@@ -124,16 +221,8 @@
 				window.location = "login.jsp";
 			}
 		</script>
-		<br />
-		<br />
+		<br /> <br />
 	</center>
-	<%
-		} else {
-	%>
-	<div class="container firstdiv">
-		<h1>Kindly Login to Proceed</h1>
-		<br /> <a href="login.jsp">Login Page</a>
-	</div>
 
 	<%
 		}

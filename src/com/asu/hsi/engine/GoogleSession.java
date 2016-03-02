@@ -5,6 +5,7 @@ import java.security.GeneralSecurityException;
 import java.util.Arrays;
 
 import com.asu.hsi.properties.Constants;
+import com.asu.hsi.properties.SessionVar;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken.Payload;
@@ -13,8 +14,9 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 
 public class GoogleSession {
 
-	public static boolean isUserValid(String token) {
+	public synchronized static boolean isUserValid(String token) {
 		boolean val = false;
+		
 		if (token == null) {
 			return val;
 		}
@@ -44,7 +46,12 @@ public class GoogleSession {
 			e.printStackTrace();
 		}
 		if (idToken != null) {
-			val = true;
+			Payload payload = idToken.getPayload();
+			String email = payload.getEmail();
+			
+			if (SessionVar.validEmails.contains(email.toLowerCase())){
+				val = true;
+			}
 		}
 
 		return val;

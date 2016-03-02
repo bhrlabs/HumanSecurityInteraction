@@ -67,7 +67,7 @@
 					<td>Browser Type</td>
 					<td>Date</td>
 					<td>Notes</td>
-					<td>CIO</td>
+					<td>Contact</td>
 					<td>Sources</td>
 				</tr>
 				<%
