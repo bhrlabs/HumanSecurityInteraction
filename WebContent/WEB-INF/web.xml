@@ -22,10 +22,19 @@
   <servlet>
     <servlet-name>Hack Login Servlet</servlet-name>
     <servlet-class>com.asu.hsi.app.HackLoginServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
+    <load-on-startup>3</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>Hack Login Servlet</servlet-name>
     <url-pattern>/HackLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Spoof Servlet</servlet-name>
+    <servlet-class>com.asu.hsi.app.SpoofServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Spoof Servlet</servlet-name>
+    <url-pattern>/SpoofServlet</url-pattern>
   </servlet-mapping>
 </web-app>

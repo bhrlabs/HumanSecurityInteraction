@@ -1,0 +1,79 @@
+.cA-upgradeBrowserBanner {
+	width: 964px;
+	float: left;
+	background-image: url('../../../JFP/images/widgets/jfpw.overlay.stripe.bg.png');
+	padding: 10px 10px;
+	display: none;
+}
+.cA-upgradeBrowserAlert {
+	background-image: url("../../../CBOL/common/images/global_sprite.png");
+	background-position: -30px -383px;
+	height: 18px;
+	width: 18px;
+	display: inline-block;
+	left: 0;
+	top: 3px;
+	position: relative;
+	top: 3px;
+	margin-right: 3px;
+}
+.cA-upgradeBrowserButton {
+	font-family: Arial, sans-serif;
+	padding: 15px 20px 12px 20px;
+	margin-left: 20px;
+	height: 14px;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #0076C0;
+	font-size: 14px;
+	vertical-align: middle;
+	border: #0076C0 1px solid;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	text-decoration: none;
+}
+.cA-upgradeBrowserButton:hover {
+	background: #ffffff;
+	text-decoration: none;
+	color: #0076C0;
+	border: #0076C0 1px solid;
+}
+.jfpw-hidden-accessible {
+	border: 0!important;
+	clip: rect(0 0 0 0)!important;
+	height: 1px!important;
+	margin: -1px!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	position: absolute!important;
+	width: 1px!important;
+}
+.cA-upgradeBrowserClose {
+	text-decoration: none;
+	float: right;
+	width: 32px;
+	margin: 0;
+	padding: 0;
+	height: 32px;
+	cursor: pointer;
+}
+.cA-upgradeBrowserCloseImage {
+	background-image: url('../../../JFP/images/widgets/jfpw.uxfta-sprite.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	height: 32px;
+	display: block;
+	margin: 0;
+	text-indent: 0;
+	width: 32px;
+}
+.cA-upgradeBrowserCloseImage:hover {
+	background-position: -32px 0;
+}

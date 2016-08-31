@@ -1,0 +1,324 @@
+/* --- Reset & General --- */
+html, body, #citilmHeader, #citilmHeader div, #citilmHeader span,
+#citilmHeader h1, #citilmHeader h2, #citilmHeader h3, #citilmHeader h4, #citilmHeader h5, #citilmHeader h6, #citilmHeader p, #citilmHeader blockquote, #citilmHeader pre,
+#citilmHeader a, #citilmHeader abbr, #citilmHeader acronym, #citilmHeader address, #citilmHeader big, #citilmHeader cite, #citilmHeader code, #citilmHeader
+del, #citilmHeader dfn, #citilmHeader em, #citilmHeader img, #citilmHeader ins, #citilmHeader q, #citilmHeader s, #citilmHeader samp, #citilmHeader
+small, #citilmHeader strike, #citilmHeader strong, #citilmHeader sub, #citilmHeader sup, #citilmHeader tt, #citilmHeader var, #citilmHeader
+b, #citilmHeader u, #citilmHeader i, #citilmHeader dl, #citilmHeader dt, #citilmHeader dd, #citilmHeader ol, #citilmHeader ul, #citilmHeader li, #citilmHeader
+fieldset, #citilmHeader form, #citilmHeader label, #citilmHeader legend,
+#citilmHeader table, #citilmHeader caption, #citilmHeader tbody, #citilmHeader tfoot, #citilmHeader thead, #citilmHeader tr, #citilmHeader th, #citilmHeader td, /*Footer Reset*/#citilmFooter, #citilmFooter div, #citilmFooter span,
+#citilmFooter h1, #citilmFooter h2, #citilmFooter h3, #citilmFooter h4, #citilmFooter h5, #citilmFooter h6, #citilmFooter p, #citilmFooter blockquote, #citilmFooter pre,
+#citilmFooter a, #citilmFooter abbr, #citilmFooter acronym, #citilmFooter address, #citilmFooter big, #citilmFooter cite, #citilmFooter code, #citilmFooter
+del, #citilmFooter dfn, #citilmFooter em, #citilmFooter img, #citilmFooter ins, #citilmFooter q, #citilmFooter s, #citilmFooter samp, #citilmFooter
+small, #citilmFooter strike, #citilmFooter strong, #citilmFooter sub, #citilmFooter sup, #citilmFooter tt, #citilmFooter var, #citilmFooter
+b, #citilmFooter u, #citilmFooter i, #citilmFooter dl, #citilmFooter dt, #citilmFooter dd, #citilmFooter ol, #citilmFooter ul, #citilmFooter li, #citilmFooter
+fieldset, #citilmFooter form, #citilmFooter label, #citilmFooter legend,
+#citilmFooter table, #citilmFooter caption, #citilmFooter tbody, #citilmFooter tfoot, #citilmFooter thead, #citilmFooter tr, #citilmFooter th, #citilmFooter td/*Footer Reset END*/ {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background-color: transparent;
+	list-style: none;
+
+
+}
+
+.hiddenSkipNav
+{position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;}
+
+#citilmHeader img, #citilmHeader a:link img, #citilmHeader a:visited img {
+	display:inline-block;
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+
+div#body {
+    margin-left: 9px;
+    overflow: visible;
+}
+#citilmHeader { font-family:arial, sans-serif; overflow: hidden;}
+
+#citilmHeader .accountLinks{
+    float:right;
+    padding-top: 15px;
+    padding-right: 210px;
+}
+
+#citilmHeader .accountLinks img {
+    padding: 0 0 0 20px;
+}
+
+#citilmHeader #brandingDataTransfer {display: none;}
+
+#citilmHeader a { color:#000; text-decoration:none;}
+#citilmHeader a:hover { text-decoration:underline; }
+#citilmHeader a.logo { display:block;float: left; background:none;}
+#citilmHeader a img { float: left; }
+
+
+#citilmHeader { font-size:11px; margin: 0 30px 15px; padding:14px 0 12px 0; border-bottom:1px solid #ccc; position:relative; width:984px; }
+#citilmHeader ul.nav {
+	float: right;
+	line-height:14px;
+}
+
+#citilmHeader ul.nav li {float: left;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-weight: bold;}
+
+#citilmHeader ul.nav li.printcopy {float: right;
+    padding-left: 15px;
+    padding-top: 30px;
+    font-weight: bold;}
+
+#citilmHeader ul.nav a.action {     background: url("https://online.citi.com/GFC/branding/img/branding_main.png") no-repeat scroll -20px -470px transparent;color:#00589D;
+    padding-left: 11px; }
+#citilmHeader ul.nav li a.linkNon{
+    background: url("https://online.citi.com/GFC/branding/img/branding_main.png") no-repeat scroll -20px -470px transparent;
+    color: #00589D;
+    padding-left: 11px;
+	text-decoration: none;
+	font-size:12px !important;
+	display: inline;
+}
+#aJRSHELP_t_sHelpCenterPopup #citilmHeader {
+	width:872px;
+}
+
+#citilmHeader ul.spfvip {text-decoration:none !important ;}
+#citilmHeader ul.spfvip li a{font-weight:bold !important; font-family:Verdana,Arial,Helvetica,sans-serif !important ; font-size:11px  !important; }
+#citilmHeader ul.spfvip a:hover{ text-decoration:underline !important ;}
+
+#citilmHeader ul.nav li#popupList a#popupClose { background: url("https://online.citi.com/JFP/css/widgets/images/submenu_arrow.png") no-repeat scroll left center transparent;color:#00589D;
+     padding-left: 11px; text-indent: 30px; display:inline !important; text-decoration:none !important;}
+
+
+/*Brandgin_footer.css for ADA*/
+div#citilmFooter div#regionalPricing{text-transform:none !important;}/**Defect 25044**/
+#citilmFooter td, #citilmFooter th, #citilmFooter div, #citilmFooter li { font-family:arial, sans-serif;}
+
+#citilmFooter input, #citilmFooter select { font-family:arial, sans-serif; vertical-align:middle; }
+
+#citilmFooter a { color:#ffffff; text-decoration:none; }
+.social_network a {background-image: url("../../../JRS/images/sprites/social_network_sprite.png");    background-repeat: no-repeat;    display: inline-block;    height: 30px;    margin-left: 20px !important;    text-indent: -99999px;    vertical-align: text-bottom;    width: 30px; overflow: hidden;}
+#citilmFooter #cmlink_TwitterIconLink { background-position: -33px 0px; margin-left: 40px !important;}
+#citilmFooter #cmlink_FacebookIconLink { background-position: 12px 0px; }
+#citilmFooter #cmlink_YoutubeIconLink { background-position: -62px 0px;     margin-right: 1px;}
+.forrester img {    margin-bottom: 0px !important;}
+.nortonSSL img {    margin-bottom: -7px !important; width: 65px; }
+.links li:last-child {    margin-top: -6px !important;
+}
+
+#citilmFooter span#brandingBottomDisclaimer span#sBOBoverlay-trigger {display:block; font-family:Arial,Verdana,sans-serif !important; font-size:12px !important; color:#00589D !important; text-decoration:none !important; margin:15px 0px 0px 0px !important; cursor:pointer !important;}
+#citilmFooter span#brandingBottomDisclaimer span#sBOBoverlay-trigger:hover {text-decoration:underline !important;}
+#citilmFooter span#brandingBottomDisclaimer a { /*color:#00589D !important;*/ color: #ffffff !important; text-decoration:none; }
+#citilmFooter .social_network a:hover { text-decoration: none !important; }
+#citilmFooter strong { font-weight:bold; }
+#citilmFooter a.logo {    margin-left: 1px; }
+#citilmFooter em { font-style:normal; }
+#citilmFooter ul { list-style:none; }
+.citilmfooterESP a {font-size:10px!important;}
+.citilmfooterESP div.links ul li a {display:inline-block; margin-left:10px!important;}
+.citilmfooterESP div.content {top:40px;}
+
+/*#citilmFooter { font-size:11px; background-color: #282828; padding:0 30px; width: 953px; margin-top: 60px; overflow: hidden; clear: both; padding:5px!important; margin-left: 25px; } */
+#citilmFooter {
+  background-color: #282828;
+  clear: both;
+  font-size: 11px;
+  margin-top: 60px;
+  overflow: hidden !important;
+  padding: 0 22px;
+  width: 940px;
+}
+#citilmFooter div.footerContent {
+    border-bottom: 1px solid #444444;
+    clear: both;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+#citilmFooter div.footerContent p {
+    color: #a8a8a8 !important;
+    margin-top: 15px;
+    line-height: 20px;
+}
+div#bodyWrapper div#citilmFooter {  position: relative; right: 22px; }
+/*#citilmFooter div.links { border-bottom:1px solid #444444; overflow: hidden; padding-bottom:5px; padding-top: 1px;  margin-top: 30px; position: relative; line-height: 1.5; } */
+#citilmFooter div.links {
+  border-bottom: 1px solid #444444;
+  border-color: #444444;
+  border-style: solid;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  overflow: hidden;
+  padding-bottom: 5px;
+  padding-top: 1px;
+  position: relative;
+}
+* html #citilmFooter div.links { display:inline-block; }
+#citilmFooter div.links a { float: left; }
+#citilmFooter .cclinks { margin-left:20px;}
+#citilmFooter div.links ul { 
+	/*float:right;margin-top: 7px;*/
+	margin-top: 13px;
+  }
+span.social_network {
+  float: right;
+}
+#citilmFooter div.links ul li {float:left;}
+#citilmFooter div.links ul li a {display:inline-block; color: #ffffff; margin-left:25px;font-family: Arial;      font-size: 13px;      font-weight: bold;}
+span#cbol-footer-mlc {    color: #282828 !important; }
+#citilmFooter a:hover {    color: #a8a8a8 !important;    font-family: Arial !important;   }
+span#cbol-footer-server {   padding-right: 33px; }
+#citilmFooter div.fdic_content {/*margin-left:9px !important; padding-top:20px; padding-bottom:9px; position:relative; vertical-align:middle !important; float: right;margin-bottom: 30px;*/
+  float: right;
+  height: auto;
+  margin: 40px 24px 30px 0;
+  position: relative;
+  vertical-align: middle !important;
+  width: auto;
+}
+#citilmFooter div.fdic_content #fdicOverlay-trigger {
+    color: #00589D;
+	cursor: pointer;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    vertical-align: middle !important;
+}
+#citilmFooter div.fdic_content .social_network {
+    color: #666666;
+    float: right !important;
+	line-height : 1px;
+    padding-bottom: 10px;
+    vertical-align: middle !important;
+}
+
+img.cM-contentSpriteBase.cM-FDIC { margin-left: 20px !important;}
+span.EqualHousing {    margin-left: 20px !important;}
+span.nortonSSL {    margin-left: 20px !important;}
+span.AdChoices {    margin-left: 20px !important; }
+
+#citilmFooter div.content {clear:both; padding:0 80px 0 37px; position:relative; }
+#citilmFooter div.content img { position:absolute; top:8px; left:0; }
+#citilmFooter div.content #brandingBottomDisclaimer img {position:relative;}
+#citilmFooter div.content p {color:#999 !important; margin-top:15px; }
+#citilmFooter div.content td {color:#999;}
+
+#citilmFooter div.copyright {/*color:#999 !important;   font-size: 12px;  height: 35px;float: left;width: 175px;margin-left: 5px;margin-top: 40px;*/
+  color: #a8a8a8 !important;
+  float: left;
+  padding-top: 5px;
+  font-size: 12px;
+  height: auto;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  text-align: left;
+  width: 168px;
+}
+#citilmFooter #brandingDataTransfer {display: none; }
+#citilmFooter a:hover,#citilmFooter a:focus {
+    color: #a8a8a8 !important;
+    font-family: Arial !important;
+    outline:1px solid #fff !important;
+}
+
+/* --- Overlay --- */
+.ui-dialog.jfpw-dialog .ui-dialog-titlebar-close { width: 20px; }
+.ui-dialog.jfpw-dialog .ui-dialog-titlebar-close span { width: 20px; overflow: hidden; }
+.ui-dialog.jfpw-dialog .ui-widget-header {}
+.ui-dialog.jfpw-dialog .ui-widget-header .ui-icon {  background-position: 0 -3px; text-indent: -999em; }
+.ui-dialog.jfpw-dialog .ui-dialog-title { font-size: 12px; font-weight:bold; left: 30px; margin: 0; position: absolute; text-transform: uppercase; top: 30px; height: 31px; z-index: 1002;}
+.ui-dialog.jfpw-dialog .ui-dialog-content { padding: 0 30px; }
+.ui-dialog-titlebar { height: 31px !important; }
+.vIE8 .jfpw-slider-vertical-wrap-tip-down {z-index:2!important;}
+
+span#fdicOverlay {
+	display:block;
+	overflow:visible;
+	zoom: 0!important;
+	position:static !important;
+}
+
+/* --- Banking Address Overlay --- */
+
+#fidcOvContent{
+	padding:0;
+	margin-top:10px;
+	position:relative;
+}
+
+#fdicOvContent p { color: #000; font-weight:normal; font-family:arial, sans-serif; font-size: 12px; width: 470px;}
+
+/*--SPF- Cards only customer */
+#citilmFooter #citiLogoBranding { }
+#citilmFooter div.content  span.bottomDisclaimerText p{margin-left:20px;width:710px;}
+#citilmFooter span#cardsVerContents{float:right !important;width:148px; margin-top:-40px; margin-left:30px;position:static;}
+#citilmFooter span#cardsVerContents div#brandingVerisignLogo{text-align:right;}
+#citilmFooter span#cardsVerContents div.copyright{margin-left:-400px;}
+
+/* ---------------------------- */
+/* === AT&T BRANDING STYLES === */
+/* ---------------------------- */
+
+#citilmFooter.ATT .content {
+	padding: 18px 0 0 0;
+	top: 0;
+}
+#citilmFooter.ATT .content .ATT_panel img {
+	position: static;
+}
+#citilmFooter.ATT .content .ATT_leftPanel {
+	float: left;
+	width: 790px;
+}
+#citilmFooter.ATT .content .ATT_leftPanel p {
+	margin-top: 12px;
+}
+#citilmFooter.ATT .content .ATT_rightPanel {
+	float: right;
+	text-align: right;
+	width: 130px;
+}
+#citilmFooter.ATT .content .ATT_rightPanel #brandingVerisignLogo {
+	padding: 20px 0;
+}
+
+#citilmFooter #cmlink_TwitterIconLink {
+    background-position: -33px -6px;
+    margin-left: 40px !important;
+}
+
+#citilmFooter #cmlink_YoutubeIconLink {
+    background-position: -62px 0;
+    margin-right: 1px;
+}
+#citilmFooter #cmlink_FacebookIconLink {
+    background-position: 12px -5px;
+}
+#citilmFooter div.links ul {
+    float: right;
+    margin-top: 13px;
+}
+/* -------------------------------- */
+/* === END AT&T BRANDING STYLES === */
+/* -------------------------------- */
+
+/*Brandgin_footer.css for ADA END*/

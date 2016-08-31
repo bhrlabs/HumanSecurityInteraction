@@ -1,0 +1,172 @@
+div#body {top: 15px !important;}
+div#welcome{margin-bottom:10px; margin-left:4px;padding-bottom:10px;}
+div#welcome h1{margin-bottom:10px;font-size:16px;color:#333;}
+div#welcome a {
+    color: #00589d !important;
+    border-bottom: none !important;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none !important;
+    cursor:pointer;
+}
+div#welcome a:active,div#welcome a:hover {
+    border-bottom: none;
+    text-decoration: underline !important;
+}
+div#infocus{float:right;width:227px;margin-bottom:12px;margin-top:2px;}
+div#welcome div#infocus a{border:none;}
+div#welcome-main{margin-right:0;margin-bottom:12px;font-size: 12px;}
+div#welcome-main p{margin-bottom:12px;}
+div#welcome-main p span.icon{background:url(../../../JFP/images/global_sprite.png) no-repeat scroll 0px 2px transparent; width: 13px; display: block; height: 16px; float: left;}
+div#welcome-main p span.iconRed{background:url(../../../JFP/images/global_sprite.png) no-repeat scroll 0px -210px transparent; width: 13px; display: block; height: 16px; float: left;}
+div#welcome-main p span.IntroP {padding-left:20px;display: block;}
+div#welcome-msg p{font-size:14px;}
+div#welcome-main h2{margin: 0 0 6px 0;position:relative;font-size:14px;color:#036;}
+div#welcome-main ul{padding-left:0;margin-left:0;margin-bottom:6px;color:#333;list-style-type:none;font-size:11px;font-family:verdana;}
+div#welcome-main li{font-size:11px;font-family:verdana;margin-bottom:4px;background:none;padding-left:0;}
+div#welcome-main sup{vertical-align:super; font-size:10px;}
+div#welcome-main table.browserTable {border-top: 1px solid #c5c5c5; border-bottom: 1px solid #c5c5c5; 	width: 100%;}
+div#welcome-main table.browserTable th {border-bottom: 1px solid #ccc; font-weight:bold; text-align:left;padding: 0 5px;}
+div#welcome-main table.browserTable td {padding:10px 5px; text-align:left;}
+div#welcome-main table.browserTable tr.even td  {background-color:#f1f1f1;}
+div#welcome-main table.browserTable caption {
+	display:none;}
+div#welcome-main table.browserUpTable {border-top: 1px solid #c5c5c5; border-bottom: 1px solid #c5c5c5; 	width: 70%;}
+div#welcome-main table.browserUpTable th {border-bottom: 1px solid #ccc; font-weight:bold; text-align:left;padding: 0 5px;}
+div#welcome-main table.browserUpTable td {padding:10px 5px; text-align:left;}
+div#welcome-main table.browserUpTable tr.even td  {background-color:#f1f1f1;}
+div#welcome-main table.browserUpTable caption{
+	display:none;}
+div#welcome-main p span.arrow{background:url(../../../JFP/images/global_sprite.png) no-repeat scroll -7px -398px  transparent; width: 10px; display: block; height: 6px; float: left; margin-top: 4px;}
+div#welcome-main #bottom-disclaimer {font-size: 11px;}
+div#welcome-main #bottom-disclaimer p{color:#666; font-size: 11px;}
+div#welcome-main #buttondiv {margin: 8px 0; padding-top: 20px; border-top:1px solid #ccc;} 
+div#welcome-main .btn-continue {
+	display: block;
+    background: #265e9b;
+    background: url(https://online.citi.com/JRS/images/marketing/BTN-apply-online.gif) top left repeat-x;
+    color: #fff !important;
+    line-height: 10px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial !important;
+    width: 80px;
+}
+div#welcome-main .btn-continue:hover {
+	background-position: bottom left;
+    text-decoration: none !important;
+}
+#forgotUN {
+	padding:15px 15px 0 0;
+}
+#forgotUN a{
+	color: #FFF;
+}
+a:link,a:active,a:visited{text-decoration:none !important;}
+a:hover{text-decoration:underline !important;}
+br.clear {clear:both;}
+
+div#side-area{top:137px;left:0;width:197px; position:absolute;}
+div#side-area{top:137px;left:0;width:197px; position:absolute;}
+div#side-area h2{font-size:13px;margin-bottom:7px;color:#036;}
+div#side-area-sub1{margin-bottom:15px;background:url(https://online.citi.com/JRS/BrowserWarn/signon-bg.jpg) no-repeat top left;}
+
+/*
+div#signon{padding:14px 0 0px 14px;}
+div#signon h2{font-family:arial;color:#fff;font-weight:bold;margin-bottom:2px;}
+div#signon-choose{margin-bottom:8px;}
+div#side-area-sub1 select{width:168px;font:11px verdana, sans-serif;}
+*/
+div#side-flyouts{padding:10px 10px 10px 14px;background:url(https://online.citi.com/JRS/BrowserWarn/signon-bg-bot.gif) no-repeat bottom left;}
+div#side-flyouts h2{margin-bottom:2px;}
+div#side-flyouts h2 a{text-decoration:none;color:#fff !important;padding-left:15px;font-size:12px;font-family:arial;font-weight:bold;background:url(https://online.citi.com/JRS/BrowserWarn/flyout_open0.gif) no-repeat left;}
+div#country h2 a:hover,
+div#more h2 a:hover{color:#42AFE5;background-image:url(https://online.citi.com/JRS/BrowserWarn/flyout_open1.gif);text-decoration:underline;}
+div#side-flyouts p{font-family:arial;font-size:11px;color:#fff;margin:0 0 0 16px;}
+div#side-area-sub2{height:325px;}
+div#country{position:relative;margin-top:6px;}
+div#country p{margin:0 15px 4px 0; font-size:11px;}
+
+.dropDown {margin:0; padding:0; width:175px;}
+.dropDown ul, .dropDownOpen ul {margin:0; padding: 0;}
+.dropDown li {list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:0 0 5px;}
+.dropDown .DropBg a {background:transparent url(https://online.citi.com/JRS/BrowserWarn/box_bg_down.gif) no-repeat scroll 0 0;}
+.dropDown .DropBg a, .dropDownOpen .DropBg a {color:#088eee;font-family:Verdana;font-size:11px; display: block; width:165px; height:16px; margin:0; padding:5px 0 5px 10px; text-decoration:none;}
+.dropDownOpen .DropBg a { background:transparent url(https://online.citi.com/JRS/BrowserWarn/box_bg_up.gif) no-repeat scroll 0 0; }
+.dropDown .DropBg a:hover, .dropDownOpen .DropBg a:hover { color:#33ccff; text-decoration:underline; }
+.dropDownOpen {	margin:0;position:absolute !important; width:175px; z-index:1000;}
+.dropDownOpen li {list-style-image:none; list-style-position:outside; list-style-type:none; margin:0; padding:0 5px 0 0; }
+.OpenClose { background:transparent url(https://online.citi.com/JRS/BrowserWarn/expanded_box_bg.gif) no-repeat scroll left bottom; margin-top:-2px; padding-bottom:5px; padding-top:5px; position:relative !important; width:175px;z-index:5000 }
+.OpenClose .LinkList li { margin-left:10px; width: 150px; padding-bottom:7px;}
+.OpenClose .LinkList li a { padding:0; text-decoration:none; background: none; }
+.OpenClose .LinkList li a:hover { text-decoration:underline;}
+.OpenClose .LinkList { margin-top:5px;}
+.Expanded { display:none;}
+
+
+/*"MORE FROM CITI" FLYOUT*/
+div#flyout-main-container{width:856px;height:273px;background-color:transparent;background-image:url(https://online.citi.com/JRS/BrowserWarn/morefrom-bg.gif);background-position:top left;background-repeat:no-repeat;padding-bottom:16px;z-index:20;}
+div#flyout-main-container div#flyout-inner-wrap{float:left;width:873px;}
+div#flyout-main-container h2#flyout-h2{margin-left:11px;margin-top:6px;margin-bottom:2px;padding:0px;}
+div#flyout-main-container h2#flyout-h2 a{text-decoration:none;font-size:12px;font-family:arial;font-weight:bold;padding-left:15px;background-image:url(https://online.citi.com/JRS/BrowserWarn/flyout_close0.gif);background-repeat:no-repeat;background-position:left;}
+div#flyout-main-container div#flyout-header p#flyout-head-tagline{margin:0 0 15px 27px;padding:0;font-family:arial;color:#333;font-size:11px;}
+div#flyout-main-container div#flyout-list-wrap{float:left;width:865px;}
+div#flyout-main-container div#flyout-gradient-wrap{float:left;margin-top:4px;margin-right:5px;margin-left:2px;}
+div#flyout-main-container div#flyout-gradient-wrap div#flyout-list-wrap{float:left;background-image:url(https://online.citi.com/JRS/css/img/home/flyout-separator.gif);background-repeat:repeat-y;background-position:top left;}		
+div#flyout-main-container div#flyout-gradient-wrap div#flyout-list-wrap h2{font-size:14px;font-family:Arial;font-weight:bold;color:#006;margin:0;padding:0;margin-bottom:5px;}
+div#flyout-main-container div#flyout-gradient-wrap div#flyout-list-wrap h2.light{color:#3399CC}
+div#flyout-main-container div#flyout-gradient-wrap div#flyout-list-wrap ul{padding:0;margin:0 0 10px 0;}
+div#flyout-main-container div#flyout-gradient-wrap div#flyout-list-wrap ul li{list-style:none;background-image:none;margin:0 15px 2px 0;line-height:15px;font-size:11px;font-family:verdana;}
+div#flyout-main-container div#flyout-gradient-wrap div#flyout-list-wrap ul li sup{font-size:11px; vertical-align:3px; }
+div#flyout-main-container div#flyout-gradient-wrap div#flyout-list-wrap ul li a{padding-bottom:0px;margin-bottom:1px;}
+
+div#flyout-main-container div#flyout-list-wrap div#flyout-col-one,
+div#flyout-main-container div#flyout-list-wrap div#flyout-col-two,
+div#flyout-main-container div#flyout-list-wrap div#flyout-col-three,
+div#flyout-main-container div#flyout-list-wrap div#flyout-col-four{float:left;display:inline;}
+
+div#flyout-main-container div#flyout-list-wrap div#flyout-col-one,
+div#flyout-main-container div#flyout-list-wrap div#flyout-col-two,
+div#flyout-main-container div#flyout-list-wrap div#flyout-col-three{width:214px;}
+div#flyout-main-container div#flyout-list-wrap div#flyout-col-one{margin-left:26px;}
+div#flyout-main-container div#flyout-list-wrap div#flyout-col-two{margin-left:10px;}
+
+/*COUNTRY SELECTOR FLYOUT*/
+.domenabled #countrymenuparent{position:absolute;top:-9px;left:0px !important;height:463px;display:none;width:222px;background:transparent url(https://online.citi.com/JRS/BrowserWarn/single_bg.png) no-repeat top right;}
+.domenabled #countrymenuparent-sub{background:url(https://online.citi.com/JRS/BrowserWarn/bg_left.png) no-repeat top left;position:relative;height:463px;}
+/* extra div for white background, to bring PNG down in size */
+.domenabled #countrymenu-bgcolor{background:transparent url(https://online.citi.com/JRS/BrowserWarn/single_bg_fill.gif) no-repeat top right;height:463px;margin-left:1px;}
+
+.domenabled ul#countrymenu,.domenabled ul#countrymenu ul{position:absolute;height:365px;}
+.domenabled ul#countrymenu,.domenabled ul#countrymenu li,.domenabled ul#countrymenu ul{width:210px;list-style-type:none;margin:0;padding:0;}
+.domenabled ul#countrymenu{top:70px;left:5px;}
+.domenabled ul#countrymenu ul.hidden{ display:block; top:0px;left:-2000px;position:absolute;}
+.domenabled ul#countrymenu ul.shown{top:0px;left:222px;position:absolute;background:url(https://online.citi.com/JRS/BrowserWarn/bg_dotborder.gif) repeat-y left;}
+.domenabled ul#countrymenu li{font:11px verdana;color:#2269b9;margin:0;text-decoration:none;float:left;}
+
+.domenabled ul#countrymenu li a{display:block;color:#088eee;text-decoration:none;padding:2px 20px 3px 11px;margin:0 6px 0 8px;background-position:95%;background-repeat:no-repeat;}
+.domenabled #countrymenu li a.open{background-color:#EAF3FA;background-image:url(https://online.citi.com/JRS/BrowserWarn/arrow-on.gif);color:#006 !important;font-weight:bold;}
+.domenabled #countrymenu li a.parent{background-image:url(https://online.citi.com/JRS/BrowserWarn/arrow-off.gif);}
+.domenabled ul#countrymenu li a:hover{background-color:#eef5fd !important;color:#42AFE5;text-decoration:underline;}
+.domenabled ul#countrymenu li a.parent:hover{color:#42AFE5;background-image:url(https://online.citi.com/JRS/BrowserWarn/arrow-over.gif) !important;}
+
+div#countrymenuparent{color:#000;font-size:12px;font-family:arial;}
+div#countrymenuparent img{border:none;}
+div#countrymenuparent p,div#countrymenuparent h1,div#countrymenuparent h2{margin-top:0;}
+div#countrymenuparent h2{margin-bottom:4px;}
+div#countrymenu-head{position:absolute;top:5px;left:9px;}
+div#countrymenu-head a{font-size:12px;font-family:arial;font-weight:bold;text-decoration:none;color:#088eee;padding-left:15px;background-image:url(https://online.citi.com/JRS/BrowserWarn/flyout_close0.gif);background-repeat:no-repeat;background-position:left;border:none !important;padding-bottom:0 !important;margin-bottom:0;}
+
+div#countrymenu-head a:hover{color:#42AFE5;border-bottom:1px solid #42AFE5;background-image:url(https://online.citi.com/JRS/BrowserWarn/flyout_close1.gif);}
+div#countrymenu-head a img{margin-bottom:4px;}
+div#countrymenu-head p{font-size:11px;font-family:arial;margin-left:18px;padding-right:33px;color:#000;}
+div#countrymenu-head h2{margin-bottom:2px;margin-top:4px;margin-left:2px;}
+
+.mkt_signon {top: 56px !important;}
+#citilmFooter {top: 850px !important;}

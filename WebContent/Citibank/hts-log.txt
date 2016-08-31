@@ -1,0 +1,35 @@
+HTTrack3.48-21+htsswf+htsjava launched on Mon, 11 Apr 2016 17:48:34 at https://online.citi.com/US/JPS/portal/Index.do +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwr3C2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://online.citi.com/US/JPS/portal/Index.do -O1 "C:\My Web Sites\Citibank" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:49:44	Error: 	"Not Found" (404) at link https://online.citi.com/US/JPS/portal/mktbgEN4.jpg (from https://online.citi.com/US/JPS/portal/Index.do)
+17:49:44	Error: 	"Not Found" (404) at link https://online.citi.com/US/JPS/portal/mktbgEN5.jpg (from https://online.citi.com/US/JPS/portal/Index.do)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/US/JPS/portal/spacer.gif (from https://online.citi.com/GFC/common/js/citi_Common.js)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/US/JPS/portal/POST (from https://online.citi.com/GFC/common/js/citi_Common.js)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/US/JPS/portal/GET (from https://online.citi.com/GFC/common/js/citi_Common.js)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/images/verisignseal.gif (from https://online.citi.com/JRS/js/verisign.js)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/US/JPS/portal/getverisignsealimage.js (from https://online.citi.com/JRS/js/verisign.js)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/JFP/css/common/global/images/jfpw.datepicker.png (from https://online.citi.com/JFP/css/common/JPPTemp.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/JFP/images/widgets/previous.png (from https://online.citi.com/JFP/css/common/JPPTemp.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/JFP/images/widgets/next.png (from https://online.citi.com/JFP/css/common/JPPTemp.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/JFP/images/widgets/sprevious.png (from https://online.citi.com/JFP/css/common/JPPTemp.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/JFP/images/widgets/snext.png (from https://online.citi.com/JFP/css/common/JPPTemp.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/JFP/css/common/ellipsis-xbl.xml (from https://online.citi.com/JFP/css/common/JPPTemp.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/JFP/images/widgets/arrows-ffffff.png (from https://online.citi.com/JFP/css/common/JPPTemp.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/JRS/css/indicator.gif (from https://online.citi.com/JRS/css/US-Regional.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/GFC/branding/css/indicator.gif (from https://online.citi.com/GFC/branding/css/branding_main.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/GFC/branding/img/message-sprite.png (from https://online.citi.com/GFC/branding/css/branding_main.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/GFC/branding/img/bar-person-update.png (from https://online.citi.com/GFC/branding/css/branding_main.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/GFC/branding/img/ATT-bar-person-update.png (from https://online.citi.com/GFC/branding/css/branding_main.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/GFC/branding/img/notifications-sprite-update.png (from https://online.citi.com/GFC/branding/css/branding_main.css)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/US/JPS/portal/AppleWebKit/ (from nexus.ensighten.com/citi/na_prod/Bootstrap.js)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/US/JPS/portal/CMUrlTag returned null for contentId:PlainMKTBranding, appId:USCBOL (from https://online.citi.com/US/JPS/portal/BrowserWarning.do)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/US/JPS/portal/signon_pbg.gif (from https://online.citi.com/GFC/branding/js/branding_universal_megaMenu.js)
+17:49:45	Error: 	"Not Found" (404) at link https://online.citi.com/US/JPS/portal/signoff_pbg.gif (from https://online.citi.com/GFC/branding/js/branding_universal_megaMenu.js)
+
+HTTrack Website Copier/3.48-21 mirror complete in 1 minutes 11 seconds : 259 links scanned, 234 files written (4421962 bytes overall) [2185215 bytes received at 30777 bytes/sec], 3100412 bytes transferred using HTTP compression in 79 files, ratio 23%, 38.0 requests per connection
+(24 errors, 0 warnings, 0 messages)

@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+onlineservices.wellsfargo.com	TRUE	/auth/	FALSE	1999999999	gingerbread_cookie	BC6F61B6623DBDF3AD55844D6A9EA64C
+onlineservices.wellsfargo.com	TRUE	/auth	FALSE	1999999999	AuthCookie	18a4df61-1494-4905-a2f1-8842debcf124
+.wellsfargo.com	TRUE	/	FALSE	1999999999	wfacookie	45201604111747061515494212
+onlineservices.wellsfargo.com	TRUE	/	FALSE	1999999999	ISD_LA_COOKIE	BANeKrmEmMBUY1HKEoBFApPnMxcqH2tQvXlCjne34Pac0CKtxcSS1A4plN0lqSY6/aXzItvl4QcSUNnlce036f6Jaefn+axMK7P42RXom1jfBYR06RN46U9b4KVhl8RGNfMwDppKbHdyrLQcMBZevO7kac81LcpRodAAAAAB
+
