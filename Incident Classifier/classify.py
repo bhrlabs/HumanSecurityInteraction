@@ -6,6 +6,7 @@ import pandas as pd
 import re
 import csv
 from textblob.classifiers import NaiveBayesClassifier
+from textblob.classifiers import DecisionTreeClassifier
 #NaiveBayesClassifier DecisionTreeClassifier
 from textblob import TextBlob
 
@@ -31,9 +32,11 @@ print "Traing Set is Processed"
 
 print "Learning in progress ..."
 classifier = NaiveBayesClassifier(training_data)
+classifier2 = DecisionTreeClassifier(training_data)
 print "Classifier Ready"
 
-print classifier.accuracy(test_data)
+print 'NaiveBayesClassifier Accuracy - ', classifier.accuracy(test_data)
+print 'DecisionTreeClassifier Accuracy - ', classifier2.accuracy(test_data)
 print(classifier.classify(u"Prosthetic and Orthotic Care (POC), an independent prosthetics and orthotics company serving disabled individuals in Southern Illinois and Eastern Missouri, has discovered that an unauthorized individual has stolen the protected health information of 23,015 patients.The cyberattack occurred in June 2016, although POC only became aware of the hacking incident on July 10. The hacker gained access to patient data by exploiting security flaw in a third party software system that had been purchased by POC. The attack was conducted by a hacker operating under the name â€“ TheDarkOverlord â€“ who was also responsible for the cyberattacks on Athens Orthopedic Clinic and Midwest Orthopedics Group, in addition to a hack of as of yet unnamed health insurer. In total, the records of over 9.5 million patients are understood to have been obtained by the hacker.According to a breach notice issued by POC, the stolen data include names, addresses and other contact information, internal ID numbers, billing amounts, appointment dates, and diagnostic codes. Some patients also had their Social Security number, date of birth, procedure photographs, health insurerâ€™s names, and other identification information stolen. The breach total number was included in the posting of the third party software vendor who was hacked and affected many medical clinics, practices and facilities.".encode('ascii', errors='ignore')))
 
 
