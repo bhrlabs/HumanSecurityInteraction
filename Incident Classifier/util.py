@@ -39,7 +39,7 @@ def buildTrainingData():
 def organizeResult():
     oth = 0
     hum = 0
-    with open('Classifier_results2.csv') as csvfile:
+    with open('Human_results2.csv') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             if row['Classification'] == 'HUMAN':
@@ -56,6 +56,28 @@ def organizeResult():
     pie(sums, labels=['OTHER: '+str(sums[0]), 'HUMAN: '+str(sums[1])]);
     show()
 
+def catagorize():
+    res = {}
+    with open('Human_results2.csv') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            if row['Entity'] in res:
+                res[row['Entity']] = res[row['Entity']] + 1
+            else:
+                res[row['Entity']] = 1
+    res.pop('')
+    fig, ax = plt.subplots()
+    ax.bar(range(len(res)), res.values(), align='center')
+    #ax.set_xticklabels( ['']+res.keys())
+    ax.set_xticklabels( ['', 'Medi', 'NGO', 'Retail', 'Other', 'Edu', 'Finc', 'Gov'])
+
+    for rect, label in zip(ax.patches, res.values()):
+        height = rect.get_height()
+        ax.text(rect.get_x() + rect.get_width()/2, height + 5, label, ha='center', va='bottom')
+
+    plt.show()
+
 if __name__ == "__main__":
-    organizeResult()
+    catagorize()
+    #organizeResult()
     #buildTrainingData()
