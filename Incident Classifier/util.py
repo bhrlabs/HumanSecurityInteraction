@@ -6,6 +6,7 @@ import csv
 import re
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import pie, axis, show
+import numpy as np
 
 def buildTrainingData():
     data_raw = pd.read_csv('Full_Data.csv', header=0)
@@ -58,24 +59,41 @@ def organizeResult():
 
 def catagorize():
     res = {}
+    resAll = {}
     with open('Human_results2.csv') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            if row['Entity'] in res:
-                res[row['Entity']] = res[row['Entity']] + 1
+            if row['Classification'] == 'HUMAN':
+                if row['Entity'] in res:
+                    res[row['Entity']] = res[row['Entity']] + 1
+                else:
+                    res[row['Entity']] = 1
+            if row['Entity'] in resAll:
+                resAll[row['Entity']] = resAll[row['Entity']] + 1
             else:
-                res[row['Entity']] = 1
+                resAll[row['Entity']] = 1
     res.pop('')
-    fig, ax = plt.subplots()
-    ax.bar(range(len(res)), res.values(), align='center')
+    resAll.pop('')
+    ax = plt.subplot()
+    li1 = np.arange(len(res)) + 0.2
+    li2 = np.arange(len(res)) - 0.2
+
+    rrr1 = ax.bar(li1, res.values(), width=0.4, color='b', align='center')
+    rrr2 = ax.bar(li2, resAll.values(), width=0.4, color='g', align='center')
+    ax.legend([rrr1, rrr2], ["Human", "All"])
     #ax.set_xticklabels( ['']+res.keys())
     ax.set_xticklabels( ['', 'Medi', 'NGO', 'Retail', 'Other', 'Edu', 'Finc', 'Gov'])
 
-    for rect, label in zip(ax.patches, res.values()):
+    for rect, label in zip(rrr1, res.values()):
         height = rect.get_height()
         ax.text(rect.get_x() + rect.get_width()/2, height + 5, label, ha='center', va='bottom')
 
+    for rect, label in zip(rrr2, resAll.values()):
+        height = rect.get_height()
+        ax.text(rect.get_x() + rect.get_width()/2, height + 15, label, ha='center', va='bottom')
+
     plt.show()
+
 
 if __name__ == "__main__":
     catagorize()
